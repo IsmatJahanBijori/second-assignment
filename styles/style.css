@@ -247,12 +247,48 @@ nav button {
     justify-content: space-evenly;
 }
 
+/* team-members styles */
+ .team-members{
+    margin-top: 200px;
+    margin-left: 300px;
+ }
+.team-members-info{
+    height: 10vh;
+    width: 10vw;
+    display: grid;
+    grid-template-areas: 
+    "i1 i1 i1 i1"
+    "i2 i2 i2 i3"
+    "i4 i4 i4 i3";
+    grid-column-gap: 10px;
+}
+.image1{grid-area: i1;}
+.image2{grid-area: i2;}
+.image3{grid-area: i3;}
+.image4{grid-area: i4;}
+
+.extra-section input[type="text"], input[type="email"], input[type="phone"], textarea{
+    margin-bottom: 24px;
+    margin-left: 200px;
+    border: 0;
+    width: 50%;
+    padding: 18px 35px;
+    font-size: 20px;
+}
+.section-title {
+
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
 /*footer  */
 .footer {
     height: 100px;
     width: 60%;
     background-color: rgba(255, 144, 14, 0.1);
-    margin: 100px 240px 100px;
+    margin: 300px 240px 100px;
 }
 
 .footer h5 {
@@ -261,4 +297,9 @@ nav button {
     text-align: center;
     color: var(--darkgray);
     padding-top: 35px;
+}
+
+/* design media query for mobile devices */
+@media only screen and (max-width:576px) {
+    
 }
