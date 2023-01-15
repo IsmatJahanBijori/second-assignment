@@ -1,6 +1,6 @@
-:root{
-    --darkgray:#424242;
-    --darkblack:#131313;
+:root {
+    --darkgray: #424242;
+    --darkblack: #131313;
     --lightgary: #727272;
     --orange: #FF900E;
 }
@@ -47,6 +47,10 @@ nav button {
 
 .banner-heading {
     text-align: center;
+}
+
+.banner-image {
+    width: auto;
 }
 
 .banner-title {
@@ -164,11 +168,23 @@ nav button {
     color: var(--lightgary);
 }
 
-.main-image .btn-primary {
-    width: 200px;
-    height: 100px;
+.features-image .btn-primary {
+    width: 250px;
+    height: 160px;
     text-align: center;
     color: #FFFFFF;
+    border-radius: 5px;
+    /* position: absolute;
+    top: 245%;
+    right: 20%;
+    transform: translate(-245%, -20%);
+    -ms-transform: translate(-245%, -20%); */
+
+}
+
+.features-image {
+    font-weight: 700;
+    font-size: 65px;
 }
 
 /* facts style */
@@ -205,8 +221,15 @@ nav button {
 .field {
     border: 1px solid var(--orange);
     padding: 20px;
-    width: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
+    transition: width 5s linear 1s;
+}
+
+.field:hover {
+    width: 270px;
+    transform: rotate(180deg);
 }
 
 .field h4 {
@@ -248,26 +271,47 @@ nav button {
 }
 
 /* team-members styles */
- .team-members{
+.team-members {
     margin-top: 200px;
     margin-left: 300px;
- }
-.team-members-info{
+}
+
+.team-members p {
+    margin-top: 150px;
+    color: brown;
+}
+
+.team-members-info {
     height: 10vh;
     width: 10vw;
     display: grid;
-    grid-template-areas: 
-    "i1 i1 i1 i1"
-    "i2 i2 i2 i3"
-    "i4 i4 i4 i3";
+    grid-template-areas:
+        "i1 i1 i1 i1"
+        "i2 i2 i2 i3"
+        "i4 i4 i4 i3";
     grid-column-gap: 10px;
 }
-.image1{grid-area: i1;}
-.image2{grid-area: i2;}
-.image3{grid-area: i3;}
-.image4{grid-area: i4;}
 
-.extra-section input[type="text"], input[type="email"], input[type="phone"], textarea{
+.image1 {
+    grid-area: i1;
+}
+
+.image2 {
+    grid-area: i2;
+}
+
+.image3 {
+    grid-area: i3;
+}
+
+.image4 {
+    grid-area: i4;
+}
+
+.extra-section input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
     margin-bottom: 24px;
     margin-left: 200px;
     border: 0;
@@ -275,6 +319,7 @@ nav button {
     padding: 18px 35px;
     font-size: 20px;
 }
+
 .section-title {
 
     text-align: center;
@@ -283,6 +328,7 @@ nav button {
     font-weight: 700;
     margin-bottom: 50px;
 }
+
 /*footer  */
 .footer {
     height: 100px;
@@ -301,5 +347,119 @@ nav button {
 
 /* design media query for mobile devices */
 @media only screen and (max-width:576px) {
-    
+    body{
+        margin-right: 0;
+        padding-right: 0;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .nav-title {
+        text-align: center;
+    }
+
+    .banner-image {
+        width: 80%;
+        height: 50%;
+    }
+
+    .container {
+        margin-left: auto;
+    }
+
+    .container-info {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 500px;
+        margin-left: 100px;
+    }
+
+    .container-images {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 50px;
+    }
+
+    .container-details {
+        margin-top: 700px;
+        width: 500px;
+        height: 400px;
+    }
+
+    .main-block {
+        flex-direction: column;
+    }
+
+    .features {
+        margin-left: 10px;
+        margin-top: 10px 0;
+    }
+
+    .features-design {
+        width: 560px;
+        height: 982px;
+    }
+
+    .features-image {
+        width: 80%;
+        height: 50%;
+    }
+
+    .features-image .btn-primary {
+        width: 10px;
+        height: auto;
+        
+    }
+
+    .facts-section {
+        margin-left: 100px;
+    }
+
+    .facts-details {
+        flex-direction: column;
+    }
+
+    .sponsors-text {
+        margin: 100px;
+        text-align: center;
+        text-align: justify;
+    }
+
+    .sponsors-image {
+        display: flex;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .team-members {
+        margin-top: 300px;
+        margin-left: 100px;
+    }
+
+    .team-members-info {
+        height: 10vh;
+        width: 10vw;
+        display: grid;
+        grid-template-areas:
+            "i1"
+            "i2"
+            "i3"
+            "i4";
+        grid-column-gap: 15px;
+    }
+
+    .footer {
+        height: 100px;
+        width: 60%;
+        margin: 900px 100px 100px;
+    }
+
 }
